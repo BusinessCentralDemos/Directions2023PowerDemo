@@ -1,0 +1,118 @@
+"'Measurement Screen' As screen":
+    OnVisible: |-
+        =UpdateContext({ctxSelectedMeasurement:Blank()});
+
+    Container6 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height - 40
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container7_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =100 
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =1
+
+            Label2 As label:
+                Align: =Align.Center
+                Color: =varTheme.brandColor
+                Font: =varTheme.font
+                Height: =Parent.Height
+                Size: =34
+                Text: ="AR Measurement"
+                Width: =Parent.Width
+                ZIndex: =1
+
+            Icon3 As icon.Cancel:
+                Color: =varTheme.brandColor
+                Height: =100
+                Icon: =Icon.ChevronLeft
+                OnSelect: =Back(ScreenTransition.UnCoverRight)
+                PaddingBottom: =30
+                PaddingLeft: =30
+                PaddingRight: =30
+                PaddingTop: =30
+                Width: =100
+                ZIndex: =2
+
+        Image1 As image:
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =2
+            Height: =Parent.Height * 0.6
+            Image: =varImage.ImageURI
+            ImagePosition: =ImagePosition.Fill
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width * 0.9
+            ZIndex: =2
+
+        "galMeasurements As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DelayItemLoading: =true
+            FillPortions: =0
+            Height: =70
+            Items: |-
+                =[
+                    {name: "H:", longName: "Height", value: varMeasurement.Height },
+                    {name: "W:",longName: "Width", value: varMeasurement.BoundingWidth},
+                    {name: "D:",longName: "Depth", value: varMeasurement.BoundingDepth}
+                ]
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: =
+            TemplatePadding: =0
+            TemplateSize: =Parent.Width /3
+            ZIndex: =2
+
+            conMeasurementContainer As groupContainer.manualLayoutContainer:
+                Height: =Parent.TemplateHeight
+                Width: =Parent.TemplateWidth - 20
+                X: =10
+                ZIndex: =5
+
+                btnMeasurement As button:
+                    BorderThickness: =0
+                    DisplayMode: =DisplayMode.View
+                    Fill: =varTheme.brandColor
+                    Height: =Parent.Height -4
+                    HoverFill: =ColorFade(Self.Fill, -20%)
+                    OnSelect: |-
+                        =If(ctxSelectedMeasurement.name = ThisItem.name,
+                            UpdateContext({ctxSelectedMeasurement: Blank()});
+                            ,
+                            UpdateContext({ctxSelectedMeasurement: ThisItem});
+                        );
+                    RadiusBottomLeft: =40
+                    RadiusBottomRight: =40
+                    RadiusTopLeft: =40
+                    RadiusTopRight: =40
+                    Size: =20
+                    Text: =ThisItem.name & " " & ThisItem.value & "cm"
+                    Width: =Parent.Width 
+                    ZIndex: =1
+
+        Button2 As button:
+            BorderThickness: =0
+            Fill: =varTheme.brandColor
+            Height: =80
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate('Coffee Machines Screen', ScreenTransition.Cover);
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            Size: =20
+            Text: ="Use as filter"
+            Width: =250
+            ZIndex: =5
+
