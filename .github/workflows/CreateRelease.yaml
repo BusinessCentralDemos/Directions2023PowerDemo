@@ -66,22 +66,27 @@ jobs:
 
       - name: Initialize the workflow
         id: init
-        uses: BusinessCentralDemos/AL-Go-Actions/WorkflowInitialize@main
+        uses: BusinessCentralDemos/AL-Go-Actions/WorkflowInitialize@PowerPlatform
         with:
           shell: powershell
           eventId: "DO0094"
 
       - name: Read settings
         id: ReadSettings
-        uses: BusinessCentralDemos/AL-Go-Actions/ReadSettings@main
+        uses: BusinessCentralDemos/AL-Go-Actions/ReadSettings@PowerPlatform
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
           get: templateUrl,repoName
-          getProjects: 'Y'
+
+      - name: Determine Projects
+        id: determineProjects
+        uses: BusinessCentralDemos/AL-Go-Actions/DetermineProjectsToBuild@PowerPlatform
+        with:
+          shell: powershell
 
       - name: Check for updates to AL-Go system files
-        uses: BusinessCentralDemos/AL-Go-Actions/CheckForUpdates@main
+        uses: BusinessCentralDemos/AL-Go-Actions/CheckForUpdates@PowerPlatform
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
@@ -94,7 +99,7 @@ jobs:
         run: |
           $ErrorActionPreference = "STOP"
           Set-StrictMode -version 2.0
-          $projects = '${{ steps.ReadSettings.outputs.ProjectsJson }}' | ConvertFrom-Json
+          $projects = '${{ steps.determineProjects.outputs.ProjectsJson }}' | ConvertFrom-Json
           Write-Host "projects:"
           $projects | ForEach-Object { Write-Host "- $_" }
           $include = @()
@@ -172,7 +177,7 @@ jobs:
 
       - name: Prepare release notes
         id: createreleasenotes
-        uses: BusinessCentralDemos/AL-Go-Actions/CreateReleaseNotes@main
+        uses: BusinessCentralDemos/AL-Go-Actions/CreateReleaseNotes@PowerPlatform
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
@@ -214,13 +219,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Read settings
-        uses: BusinessCentralDemos/AL-Go-Actions/ReadSettings@main
+        uses: BusinessCentralDemos/AL-Go-Actions/ReadSettings@PowerPlatform
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ needs.CreateRelease.outputs.telemetryScopeJson }}
 
       - name: Read secrets
-        uses: BusinessCentralDemos/AL-Go-Actions/ReadSecrets@main
+        uses: BusinessCentralDemos/AL-Go-Actions/ReadSecrets@PowerPlatform
         env:
           secrets: ${{ toJson(secrets) }}
         with:
@@ -272,7 +277,7 @@ jobs:
           Add-Content -Path $env:GITHUB_OUTPUT -Value "nuGetContext=$nuGetContext"
 
       - name: Deliver to NuGet
-        uses: BusinessCentralDemos/AL-Go-Actions/Deliver@main
+        uses: BusinessCentralDemos/AL-Go-Actions/Deliver@PowerPlatform
         if: ${{ steps.nuGetContext.outputs.nuGetContext }}
         env:
           deliveryContext: ${{ steps.nuGetContext.outputs.nuGetContext }}
@@ -297,7 +302,7 @@ jobs:
           Add-Content -Path $env:GITHUB_OUTPUT -Value "storageContext=$storageContext"
 
       - name: Deliver to Storage
-        uses: BusinessCentralDemos/AL-Go-Actions/Deliver@main
+        uses: BusinessCentralDemos/AL-Go-Actions/Deliver@PowerPlatform
         if: ${{ steps.storageContext.outputs.storageContext }}
         env:
           deliveryContext: ${{ steps.storageContext.outputs.storageContext }}
@@ -335,7 +340,7 @@ jobs:
     needs: [ CreateRelease, UploadArtifacts ]
     steps:
       - name: Update Version Number
-        uses: BusinessCentralDemos/AL-Go-Actions/IncrementVersionNumber@main
+        uses: BusinessCentralDemos/AL-Go-Actions/IncrementVersionNumber@PowerPlatform
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ needs.CreateRelease.outputs.telemetryScopeJson }}
@@ -352,7 +357,7 @@ jobs:
 
       - name: Finalize the workflow
         id: PostProcess
-        uses: BusinessCentralDemos/AL-Go-Actions/WorkflowPostProcess@main
+        uses: BusinessCentralDemos/AL-Go-Actions/WorkflowPostProcess@PowerPlatform
         with:
           shell: powershell
           eventId: "DO0094"
