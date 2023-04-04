@@ -1507,6 +1507,38 @@
           "InvariantPropertyName": "BorderThickness",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/default_cube.glb\"",
+          "InvariantPropertyName": "Source",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "0",
+          "InvariantPropertyName": "ObjectWidth",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "0",
+          "InvariantPropertyName": "ObjectHeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "0",
+          "InvariantPropertyName": "ObjectDepth",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -1522,6 +1554,26 @@
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Source",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ObjectWidth",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ObjectHeight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ObjectDepth",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Design",
           "PropertyName": "FillColor",
