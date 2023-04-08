@@ -6,7 +6,8 @@
     "andersg (Production)",
     "Staging",
     "BLAZEJ (Production)",
-    "DirectionsBackup (Production)"
+    "DirectionsBackup (Production)",
+    "Directions (Production)"
   ],
   "DeployToAndersg": {
     "environmentName": "powerAppsTest",
@@ -27,5 +28,10 @@
     "environmentName": "Production",
     "companyId": "9a7a387b-dfcd-ed11-94c8-000d3a2b981f",
     "ppEnvironmentUrl": "https://orgdd8354bb.crm.dynamics.com/"
+  },
+  "DeployToDirections": {
+    "environmentName": "Production",
+    "companyId": "9a7a387b-dfcd-ed11-94c8-000d3a2b981f",
+    "ppEnvironmentUrl": "https://org44d4fdae.crm.dynamics.com/"
   }
 }
