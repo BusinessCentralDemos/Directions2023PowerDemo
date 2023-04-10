@@ -6,7 +6,7 @@
       <LocalizedName description="DirectionsApril2023" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.0</Version>
+    <Version>1.0.7.0</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>Cr541ef</UniqueName>
@@ -81,6 +81,19 @@
       <RootComponent type="29" id="{509c4675-d3d2-ed11-a7c7-000d3a991110}" behavior="0" />
       <RootComponent type="300" schemaName="cr301_fieldhelper_3e887" behavior="0" />
     </RootComponents>
-    <MissingDependencies />
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_shareddynamicssmbsaas_4d369" solution="Active" id.connectionreferencelogicalname="new_shareddynamicssmbsaas_4d369" />
+        <Dependent type="29" displayName="Schedule support visit" id="{509c4675-d3d2-ed11-a7c7-000d3a991110}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_shareddynamicssmbsaas_8fa5c" solution="Active" id.connectionreferencelogicalname="new_shareddynamicssmbsaas_8fa5c" />
+        <Dependent type="29" displayName="Schedule support visit" id="{509c4675-d3d2-ed11-a7c7-000d3a991110}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedteams_14553" solution="Active" id.connectionreferencelogicalname="new_sharedteams_14553" />
+        <Dependent type="29" displayName="Schedule support visit" id="{509c4675-d3d2-ed11-a7c7-000d3a991110}" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

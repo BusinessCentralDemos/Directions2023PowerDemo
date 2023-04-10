@@ -1,22 +1,31 @@
 {
   "properties": {
     "connectionReferences": {
-      "shared_dynamicssmbsaas_1": {
+      "shared_dynamicssmbsaas": {
         "runtimeSource": "invoker",
         "connection": {
-          "connectionReferenceLogicalName": "cr301_BcConnection"
+          "connectionReferenceLogicalName": "new_shareddynamicssmbsaas_4d369"
         },
         "api": {
           "name": "shared_dynamicssmbsaas"
         }
       },
-      "shared_teams": {
+      "shared_teams_1": {
         "runtimeSource": "invoker",
         "connection": {
-          "connectionReferenceLogicalName": "cr301_sharedteams_4e4a1"
+          "connectionReferenceLogicalName": "new_sharedteams_14553"
         },
         "api": {
           "name": "shared_teams"
+        }
+      },
+      "shared_dynamicssmbsaas_2": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_shareddynamicssmbsaas_8fa5c"
+        },
+        "api": {
+          "name": "shared_dynamicssmbsaas"
         }
       }
     },
@@ -109,7 +118,7 @@
             },
             "host": {
               "connection": {
-                "name": "@parameters('$connections')['shared_dynamicssmbsaas_1']['connectionId']"
+                "name": "@parameters('$connections')['shared_dynamicssmbsaas']['connectionId']"
               }
             },
             "operationId": "ForASelectedRecordV3",
@@ -130,14 +139,14 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_teams",
+              "connectionName": "shared_teams_1",
               "operationId": "PostMessageToConversation",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
             },
             "parameters": {
               "poster": "Flow bot",
               "location": "Chat with Flow bot",
-              "body/recipient": "admin@M365B506604.onmicrosoft.com",
+              "body/recipient": "Horina@M365x13131944.OnMicrosoft.com;",
               "body/messageBody": "<p>Hi Horina!!&nbsp;<br>\n<br>\nNeed to go here... (MAP)<br>\nAddress (HERE)<br>\nYou have an appointment scheduled on @{triggerBody()['date']}<br>\nAll details ...</p>"
             },
             "authentication": {
@@ -158,7 +167,7 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_dynamicssmbsaas_1",
+              "connectionName": "shared_dynamicssmbsaas_2",
               "operationId": "GetAdaptiveCardV3",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
@@ -184,14 +193,14 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_teams",
+              "connectionName": "shared_teams_1",
               "operationId": "PostCardToConversation",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
             },
             "parameters": {
               "poster": "Flow bot",
               "location": "Chat with Flow bot",
-              "body/recipient": "admin@M365B506604.OnMicrosoft.com;",
+              "body/recipient": "Horina@M365x13131944.OnMicrosoft.com;",
               "body/messageBody": "@outputs('Get_adaptive_card_(V3)')?['body/AdaptiveCardJsonString']"
             },
             "authentication": {
