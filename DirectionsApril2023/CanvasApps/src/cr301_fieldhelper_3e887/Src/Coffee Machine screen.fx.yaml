@@ -23,7 +23,10 @@
         Height: =70
         HoverColor: =ColorFade(varTheme.brandColor, 20%)
         HoverFill: =Color.White
-        OnSelect: =Navigate('Extras Screen', ScreenTransition.Cover)
+        OnSelect: |-
+            =Clear(colSelectedItems);
+            Clear(colOrderSummary);
+            Navigate('Extras List Screen', ScreenTransition.Cover);
         Size: =24
         Text: ="Select"
         Width: =393

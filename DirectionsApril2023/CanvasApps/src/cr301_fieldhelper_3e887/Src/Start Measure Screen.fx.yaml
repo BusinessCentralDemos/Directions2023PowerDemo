@@ -1,6 +1,8 @@
 "'Start Measure Screen' As screen":
+    Fill: =varTheme.primaryColor
+    OnVisible: =Clear(colMeasurements);
 
-    Container4 As groupContainer.verticalAutoLayoutContainer:
+    conActions As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -21,7 +23,7 @@
             DisplayMode: =DisplayMode.Edit
             DisplayType: ='Microsoft.MeasureInMR.DisplayType'.MSR_IconText
             EnableShadows: =true
-            FillColor: =varTheme.brandColor
+            FillColor: =Color.White
             FontSize: =36
             Height: =Parent.Height * 0.20
             HoverBorderColor: =RGBA(88, 115, 171, 1)
@@ -44,7 +46,7 @@
             PressedBorderColor: =RGBA(56, 96, 178, 1)
             PressedContentColor: =RGBA(255, 255, 255, 1)
             PressedFillColor: =varTheme.brandColor
-            TextColor: =RGBA(255, 255, 255, 1)
+            TextColor: =varTheme.primaryColor
             Units: ='Microsoft.MeasureInMR.Units'.MSR_Centimeters
             Width: =Parent.Width * 0.8  
             X: =0
@@ -52,15 +54,17 @@
             ZIndex: =1
 
         btnPickFromList As button:
-            Fill: =varTheme.brandColor
+            Color: =varTheme.primaryColor
+            Fill: =Color.White
             Height: =mrStartMeasure.Height
-            HoverFill: =ColorFade(varTheme.brandColor, 20%)
-            OnSelect: =Navigate('Coffee Machines Screen', ScreenTransition.Cover);
+            HoverColor: =varTheme.primaryColor
+            HoverFill: =Color.White
+            OnSelect: =Navigate('Coffee Machines List Screen', ScreenTransition.Cover);
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedColor: =Color.White
+            PressedColor: =varTheme.primaryColor
             PressedFill: =Self.Fill
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -71,11 +75,11 @@
             Width: =mrStartMeasure.Width
             ZIndex: =2
 
-    Icon4_1 As icon.ChevronLeft:
-        Color: =varTheme.brandColor
+    icnCloseActionScreen As icon.ChevronLeft:
+        Color: =Color.White
         Height: =100 
         Icon: =Icon.Cancel
-        OnSelect: =Back(ScreenTransition.UnCoverRight)
+        OnSelect: =Navigate('Start Screen', ScreenTransition.UnCoverRight);
         PaddingBottom: =20
         PaddingLeft: =20
         PaddingRight: =20
