@@ -127,8 +127,8 @@
             RadiusTopLeft: =80
             RadiusTopRight: =80
             Size: =20
-            Text: ="Use as filter"
-            Width: =240
+            Text: ="Search Products"
+            Width: =260
             ZIndex: =4
 
     conEditOverlay As groupContainer.manualLayoutContainer:

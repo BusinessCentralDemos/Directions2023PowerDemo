@@ -1,8 +1,5 @@
 {
   "0ff5df45-9575-4f2b-8cac-8ae027644295": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Premium",
       "displayName": "Dynamics 365 Business Central",

@@ -243,8 +243,8 @@
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {
-    "MeasureInMR": 1,
-    "ViewInMR": 0
+    "MeasureInMR": 0,
+    "ViewInMR": 1
   },
   "OrderTemplate": {},
   "OrderXMLTemplate": {
@@ -292,6 +292,7 @@
     "btnYes": {},
     "Button3_1": {},
     "Button6": {},
+    "Button6_1": {},
     "Coffee Machine screen": {},
     "Coffee Machines List Screen": {},
     "comBigDivider": {},
@@ -832,7 +833,7 @@
       "MeasureInMR": 1,
       "rectangle": 14,
       "screen": 11,
-      "text": 1,
+      "text": 2,
       "timer": 1,
       "ViewInMR": 1
     },
