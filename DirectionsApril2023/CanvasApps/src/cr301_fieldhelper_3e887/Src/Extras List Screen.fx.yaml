@@ -1,4 +1,4 @@
-"'Extras Screen' As screen":
+"'Extras List Screen' As screen":
     Fill: =varTheme.brandColor
     OnVisible: |-
         =ClearCollect(colExtraItems, Filter('directionsItems (microsoft/powerApps/beta)', StartsWith(Number, "SP-")));

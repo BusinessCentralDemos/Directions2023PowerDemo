@@ -1,24 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cr301_fieldhelper_3e887</Name>
-  <AppVersion>2023-04-09T12:23:26Z</AppVersion>
+  <AppVersion>2023-04-10T13:50:58Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.23033.15.0</CreatedByClientVersion>
   <MinClientVersion>3.23033.15.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.23033.15","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20230403T195805Z-3.23032.12.0"}</Tags>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.23033.15","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20230404T123944Z-3.23033.15.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
   <DisplayName>Field Helper</DisplayName>
-  <Description></Description>
-  <CommitMessage></CommitMessage>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
   <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
-  <ConnectionReferences>{"0ff5df45-9575-4f2b-8cac-8ae027644295":{"id":"/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas","displayName":"Dynamics 365 Business Central","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1624/1.0.1624.3220/dynamicssmbsaas/icon.png","dataSources":["customers (v2.0)","salesOrders (v2.0)","salesOrderLines (v2.0)","directionsItems (microsoft/powerApps/beta)"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"Production,9a7a387b-dfcd-ed11-94c8-000d3a2b981f":{"dataSources":{"customers (v2.0)":{"tableName":"customers,v2.0"},"salesOrders (v2.0)":{"tableName":"salesOrders,v2.0"},"salesOrderLines (v2.0)":{"tableName":"salesOrderLines,v2.0"},"directionsItems (microsoft/powerApps/beta)":{"tableName":"directionsItems,microsoft%252FpowerApps%252Fbeta"}}}},"apiTier":"Premium","actions":["providers/PowerPlatform.Governance/Operations/Read"]}}</ConnectionReferences>
+  <ConnectionReferences>{"0ff5df45-9575-4f2b-8cac-8ae027644295":{"id":"/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas","displayName":"Dynamics 365 Business Central","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1624/1.0.1624.3220/dynamicssmbsaas/icon.png","dataSources":["customers (v2.0)","salesOrders (v2.0)","salesOrderLines (v2.0)","directionsItems (microsoft/powerApps/beta)"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"POWERAPPSTEST,a0d54bf1-ffb7-ed11-a389-000d3a269d47":{"dataSources":{"customers (v2.0)":{"tableName":"customers,v2.0"},"salesOrders (v2.0)":{"tableName":"salesOrders,v2.0"},"salesOrderLines (v2.0)":{"tableName":"salesOrderLines,v2.0"},"directionsItems (microsoft/powerApps/beta)":{"tableName":"directionsItems,microsoft%252FpowerApps%252Fbeta"}}}},"apiTier":"Premium","actions":["providers/PowerPlatform.Governance/Operations/Read"]}}</ConnectionReferences>
   <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
   <CanConsumeAppPass>1</CanConsumeAppPass>
   <CanvasAppType>0</CanvasAppType>
   <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
   <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>

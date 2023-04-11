@@ -4,7 +4,7 @@
         Height: =70
         OnSelect: |-
             =Set(varMeasurement, {Height: 20, BoundingWidth: 100, BoundingDepth: 20 });
-            Navigate('Coffee Machines Screen');
+            Navigate('Coffee Machines List Screen');
         Size: =24
         Text: ="Button"
         Width: =280
