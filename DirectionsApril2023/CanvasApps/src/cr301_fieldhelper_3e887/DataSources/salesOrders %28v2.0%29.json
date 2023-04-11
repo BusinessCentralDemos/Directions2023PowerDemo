@@ -59,7 +59,7 @@
       "totalAmountIncludingTax": "Total Amount Including Tax",
       "totalTaxAmount": "Total Tax Amount"
     },
-    "DatasetName": "POWERAPPSTEST,a0d54bf1-ffb7-ed11-a389-000d3a269d47",
+    "DatasetName": "powerAppsTest,a0d54bf1-ffb7-ed11-a389-000d3a269d47",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,

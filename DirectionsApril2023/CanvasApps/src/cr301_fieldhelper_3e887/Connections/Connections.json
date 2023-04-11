@@ -12,7 +12,7 @@
       "parameterHintsV2": {}
     },
     "datasets": {
-      "POWERAPPSTEST,a0d54bf1-ffb7-ed11-a389-000d3a269d47": {
+      "powerAppsTest,a0d54bf1-ffb7-ed11-a389-000d3a269d47": {
         "dataSources": {
           "customers (v2.0)": {
             "tableName": "customers,v2.0"
