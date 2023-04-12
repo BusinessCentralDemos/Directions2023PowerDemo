@@ -27,18 +27,58 @@ codeunit 52001 PowerAppsDemoDataGenerator
         AddItemCatagories('Finished goods', 'finishedGoods');
         addItemCatagories('Consumables', 'consumables');
         addItemCatagories('Maintenance', 'maintenance');
+        AddItemCatagories('Accessory', 'accessory');
 
         // Add items
-        AddItem('CO001', 'Contoso PRO 2018 San Diego', 'Contoso PRO 2018 San Diego', 'finishedGoods', 699, itemImageCodeUnit.C0001_SanDiego());
-        AddItem('CO002', 'Contoso PRO 2019 Las Vegas', 'Contoso PRO 2019 Las Vegas', 'finishedGoods', 850, itemImageCodeUnit.C0002_LasVegas());
-        addItem('CO003', 'Contoso PRO 2022 Orlando', 'Contoso PRO 2022 Orlando', 'finishedGoods', 499, itemImageCodeUnit.C0003_2022Orlando());
-        addItem('CO004', 'Contoso PRO 2023 Orlando', 'Contoso PRO 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0004_2023Orlando());
+        AddItem('CM001', 'Contoso SLIM 2018 San Diego', 'Contoso SLIM 2018 San Diego', 'finishedGoods', 699, itemImageCodeUnit.C0001_2018SandiagoSlim());
+        AddItem('CM002', 'Contoso SLIM 2019 Las Vegas', 'Contoso SLIM 2019 Las Vegas', 'finishedGoods', 850, itemImageCodeUnit.C0002_2019LasVegaSlim());
+        addItem('CM003', 'Contoso MINI  2018 San Diego', 'Contoso MINI  2018 San Diego', 'finishedGoods', 499, itemImageCodeUnit.C0003_2018SandiagoMini());
+        addItem('CM004', 'Contoso MINI 2022 Orlando', 'Contoso MINI 2022 Orlando', 'finishedGoods', 499, itemImageCodeUnit.C0004_2022OrlandoMini());
+        addItem('CM005', 'Contoso MINI 2023 Orlando', 'Contoso MINI 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0005_2023OrlandoMini());
+        addItem('CM006', 'Contoso PRO SLIM 2023 Orlando', 'Contoso PRO SLIM 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0006_2023OrlandoProSlim());
+        addItem('CM007', 'Contoso MIINI 2019 Las Vegas', 'Contoso MIINI 2019 Las Vegas', 'finishedGoods', 699, itemImageCodeUnit.C0007_2019LasVegasMini());
+
 
         // Add unit of measure      
-        AddItemUnitOfMeasure('CO001');
-        AddItemUnitOfMeasure('CO002');
-        AddItemUnitOfMeasure('CO003');
-        AddItemUnitOfMeasure('CO004');
+        AddItemUnitOfMeasure('CM001');
+        AddItemUnitOfMeasure('CM002');
+        AddItemUnitOfMeasure('CM003');
+        AddItemUnitOfMeasure('CM004');
+        AddItemUnitOfMeasure('CM005');
+        AddItemUnitOfMeasure('CM006');
+        AddItemUnitOfMeasure('CM007');
+
+        // Call AddItem for each item in the table with explicitly provided IDs
+        AddItem('E0001', 'Coffee beans', 'Freshly roasted beans for brewing coffee', 'consumable', 12, itemImageCodeUnit.E0001_beans());
+        AddItem('E0002', 'Paper filters', 'Disposable filters for drip or pour-over coffee makers', 'consumable', 6, itemImageCodeUnit.E0002_paperFilters());
+        AddItem('E0003', 'Descaling solution', 'Solution for removing mineral buildup from the coffee machine', 'consumable', 10, itemImageCodeUnit.E0003_descaling());
+        AddItem('E0004', 'Milk frothing pitcher', 'Stainless steel pitcher for steaming and frothing milk', 'consumable', 15, itemImageCodeUnit.E0004_milkFrothePither());
+        AddItem('E0005', 'Tamper', 'Tool used to compress ground coffee in the portafilter', 'accessory', 20, itemImageCodeUnit.E0005_tamper());
+        AddItem('E0006', 'Milk frother attachment', 'Attachment for making frothed milk for cappuccinos and lattes', 'accessory', 25, itemImageCodeUnit.E0006_milkFrother());
+        AddItem('E0007', 'Portafilter basket', 'Replacement or additional basket for the portafilter', 'accessory', 12, itemImageCodeUnit.E0007_portaFilterBasket());
+        AddItem('E0008', 'Knock box for used coffee grounds', 'Container for discarding used coffee grounds', 'accessory', 30, itemImageCodeUnit.E0008_box());
+        AddItem('E0009', 'Replacement water filter cartridge', 'Replacement cartridge for the water filtration system in the machine', 'accessory', 8, itemImageCodeUnit.E0009_waterFilter());
+        AddItem('E0010', 'Cleaning brush', 'Small brush for cleaning the grouphead, portafilter, and steam wand', 'maintenance', 7, itemImageCodeUnit.E0010_CleaningBrush());
+        AddItem('E0011', 'Grouphead cleaning powder', 'Powder for removing coffee oils and residue from the grouphead', 'maintenance', 9, itemImageCodeUnit.E0011_CleaningPowder());
+        AddItem('E0012', 'Steam wand cleaning solution', 'Solution for removing milk residue from the steam wand', 'maintenance', 12, itemImageCodeUnit.E0012_SteamWandcleaningSolution());
+        AddItem('E0013', 'Drip tray liners', 'Disposable liners for collecting drips and spills from the machine', 'maintenance', 5, itemImageCodeUnit.E0013_DripTrayLiners());
+
+
+        // Call AddItemUnitOfMeasure for each item with the corresponding ID
+        AddItemUnitOfMeasure('E0001');
+        AddItemUnitOfMeasure('E0002');
+        AddItemUnitOfMeasure('E0003');
+        AddItemUnitOfMeasure('E0004');
+        AddItemUnitOfMeasure('E0005');
+        AddItemUnitOfMeasure('E0006');
+        AddItemUnitOfMeasure('E0007');
+        AddItemUnitOfMeasure('E0008');
+        AddItemUnitOfMeasure('E0009');
+        AddItemUnitOfMeasure('E0010');
+        AddItemUnitOfMeasure('E0011');
+        AddItemUnitOfMeasure('E0012');
+        AddItemUnitOfMeasure('E0013');
+
 
     end;
 
