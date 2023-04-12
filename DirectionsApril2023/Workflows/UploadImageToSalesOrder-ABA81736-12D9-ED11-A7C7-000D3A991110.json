@@ -80,8 +80,8 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
             "parameters": {
-              "bcenvironment": "POWERAPPSTEST",
-              "company": "a0d54bf1-ffb7-ed11-a389-000d3a269d47",
+              "bcenvironment": "Sandbox",
+              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
               "dataset": "v2.0",
               "table": "attachments",
               "item/parentId": "@triggerBody()['text']",
@@ -108,8 +108,8 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
             "parameters": {
-              "bcenvironment": "POWERAPPSTEST",
-              "company": "a0d54bf1-ffb7-ed11-a389-000d3a269d47",
+              "bcenvironment": "Sandbox",
+              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
               "dataset": "v2.0",
               "blobnavigationpath": "salesOrders/attachments/attachmentContent",
               "pathParameters/salesOrders": "@triggerBody()['text']",
