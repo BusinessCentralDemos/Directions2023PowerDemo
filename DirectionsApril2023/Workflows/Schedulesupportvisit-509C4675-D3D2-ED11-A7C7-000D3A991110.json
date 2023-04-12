@@ -1,31 +1,22 @@
 {
   "properties": {
     "connectionReferences": {
-      "shared_dynamicssmbsaas": {
+      "shared_dynamicssmbsaas_1": {
         "runtimeSource": "invoker",
         "connection": {
-          "connectionReferenceLogicalName": "new_shareddynamicssmbsaas_4d369"
+          "connectionReferenceLogicalName": "cr301_BcConnection"
         },
         "api": {
           "name": "shared_dynamicssmbsaas"
         }
       },
-      "shared_teams_1": {
+      "shared_teams": {
         "runtimeSource": "invoker",
         "connection": {
-          "connectionReferenceLogicalName": "new_sharedteams_14553"
+          "connectionReferenceLogicalName": "cr301_sharedteams_4e4a1"
         },
         "api": {
           "name": "shared_teams"
-        }
-      },
-      "shared_dynamicssmbsaas_2": {
-        "runtimeSource": "invoker",
-        "connection": {
-          "connectionReferenceLogicalName": "new_shareddynamicssmbsaas_8fa5c"
-        },
-        "api": {
-          "name": "shared_dynamicssmbsaas"
         }
       }
     },
@@ -125,7 +116,7 @@
             },
             "host": {
               "connection": {
-                "name": "@parameters('$connections')['shared_dynamicssmbsaas']['connectionId']"
+                "name": "@parameters('$connections')['shared_dynamicssmbsaas_1']['connectionId']"
               }
             },
             "operationId": "ForASelectedRecordV3",
@@ -146,7 +137,7 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_teams_1",
+              "connectionName": "shared_teams",
               "operationId": "PostMessageToConversation",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
             },
@@ -174,7 +165,7 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_dynamicssmbsaas_2",
+              "connectionName": "shared_dynamicssmbsaas_1",
               "operationId": "GetAdaptiveCardV3",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
@@ -200,7 +191,7 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_teams_1",
+              "connectionName": "shared_teams",
               "operationId": "PostCardToConversation",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
             },

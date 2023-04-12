@@ -8,7 +8,19 @@
         Size: =24
         Text: ="Button"
         Width: =280
-        X: =165
-        Y: =290
+        X: =177
+        Y: =450
         ZIndex: =1
+
+    Button6_1 As button:
+        Height: =70
+        OnSelect: |-
+            =Set(varSelectedCustomer, LookUp('customers (v2.0)', number = "30000"));
+            Set(vartemp, 'customers (v2.0)');
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =165
+        Y: =894
+        ZIndex: =2
 

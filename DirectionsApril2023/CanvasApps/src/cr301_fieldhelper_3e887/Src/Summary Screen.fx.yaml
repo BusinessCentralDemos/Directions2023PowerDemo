@@ -482,17 +482,22 @@
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |
             =UpdateContext({ctxShowLoadingScreen: true, ctxError: false});
+            // Hard coded to use 'School of Fine Art'
+            Set(varSelectedCustomer, LookUp('customers (v2.0)', number = "30000"));
             
             Set(varCreatedSalesOrder, Patch(
                                             'salesOrders (v2.0)', 
                                             Defaults('salesOrders (v2.0)'), 
-                                            {customerId: First('customers (v2.0)').Id}
+                                            {customerId: varSelectedCustomer.Id}
                                         )
             );
             
             ForAll(colSelectedItems As item,
                 Patch('salesOrderLines (v2.0)', Defaults('salesOrderLines (v2.0)'), {documentId: varCreatedSalesOrder.id, itemId: item.id, quantity: item.quantity});
             );
+            
+            // Call flow to upload images
+            
             
             // If all patches succeeded, continue to success screen
             ClearCollect(colSelectedItems, Blank());
