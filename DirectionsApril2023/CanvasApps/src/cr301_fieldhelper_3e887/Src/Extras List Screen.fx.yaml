@@ -1,7 +1,9 @@
 "'Extras List Screen' As screen":
     Fill: =varTheme.brandColor
     OnVisible: |-
-        =ClearCollect(colExtraItems, Filter('directionsItems (microsoft/powerApps/beta)', StartsWith(Number, "SP-")));
+        =ClearCollect(colExtraItems, Filter('directionsItems (microsoft/powerApps/beta)', 'Is available for field workers'));
+        
+        ClearCollect(colExtraItemsCatagory, Distinct(Filter(colExtraItems, 'Item Category Code' <> "FINISHEDGOODS"), 'Item Category Name'));
         Select(galItemGroups, 1);
 
     conButtom As groupContainer.manualLayoutContainer:
@@ -453,13 +455,12 @@
         galItemGroups As gallery.galleryHorizontal:
             BorderColor: =RGBA(32, 54, 71, 1)
             Height: =70
-            Items: =Distinct(Filter(colExtraItems, 'Item Category Name' = "Parts"), 'Item Category Name')
+            Items: =colExtraItemsCatagory
             OnSelect: |
                 =UpdateContext({ctxItemShowingQuantityControl: Blank()});
                 Set(varSelectedItemGroup, ThisItem.Value);
             ShowScrollbar: =false
             TemplateSize: =(Parent.Width / 3) 
-            Transition: =Transition.Pop
             Width: =Parent.Width
             Y: =Parent.Height - Self.Height
             ZIndex: =1
@@ -528,7 +529,6 @@
 
     btnReviewSelectedItems As button:
         BorderColor: =Color.White
-        DisplayMode: =If(Sum(colSelectedItems, quantity) > 0, DisplayMode.Edit, DisplayMode.Disabled)
         Fill: =varTheme.primaryColor
         Font: =varTheme.font
         Height: =70

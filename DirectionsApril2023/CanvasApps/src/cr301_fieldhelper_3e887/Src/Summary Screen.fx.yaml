@@ -497,7 +497,7 @@
             );
             
             // Call flow to upload images
-            
+            UploadImageToSalesOrder.Run(varCreatedSalesOrder.Id, {file:{name:GUID() & ".png", contentBytes:Last(ViewInMR1.Photos).ImageURI}});
             
             // If all patches succeeded, continue to success screen
             ClearCollect(colSelectedItems, Blank());
