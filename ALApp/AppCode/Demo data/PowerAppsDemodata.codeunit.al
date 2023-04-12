@@ -33,7 +33,7 @@ codeunit 52001 PowerAppsDemoDataGenerator
 
         tempImage := itemImageCodeUnit.C0001_2018SandiagoSlim();
 
-        // Add items
+        // Add Coffee machines
         AddItem('CM001', 'Contoso SLIM 2018 San Diego', 'Contoso SLIM 2018 San Diego', 'finishedGoods', 699, tempImage);
         AddItem('CM002', 'Contoso SLIM 2019 Las Vegas', 'Contoso SLIM 2019 Las Vegas', 'finishedGoods', 850, itemImageCodeUnit.C0002_2019LasVegaSlim());
         AddItem('CM003', 'Contoso MINI  2018 San Diego', 'Contoso MINI  2018 San Diego', 'finishedGoods', 499, itemImageCodeUnit.C0003_2018SandiagoMini());
@@ -42,7 +42,7 @@ codeunit 52001 PowerAppsDemoDataGenerator
         AddItem('CM006', 'Contoso PRO SLIM 2023 Orlando', 'Contoso PRO SLIM 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0006_2023OrlandoProSlim());
         AddItem('CM007', 'Contoso MIINI 2019 Las Vegas', 'Contoso MIINI 2019 Las Vegas', 'finishedGoods', 699, itemImageCodeUnit.C0007_2019LasVegasMini());
 
-        // Add unit of measure      
+        // Call AddItemUnitOfMeasure for each item with the corresponding ID   
         AddItemUnitOfMeasure('CM001');
         AddItemUnitOfMeasure('CM002');
         AddItemUnitOfMeasure('CM003');
@@ -51,7 +51,7 @@ codeunit 52001 PowerAppsDemoDataGenerator
         AddItemUnitOfMeasure('CM006');
         AddItemUnitOfMeasure('CM007');
 
-        // Call AddItem for each item in the table with explicitly provided IDs
+        // Add extras items for coffee machines
         AddItem('E0001', 'Coffee beans', 'Freshly roasted beans for brewing coffee', 'consumables', 12, itemimageCodeUnitExtra.E0001_beans());
         AddItem('E0002', 'Paper filters', 'Disposable filters for drip or pour-over coffee makers', 'consumables', 6, itemimageCodeUnitExtra.E0002_paperFilters());
         AddItem('E0003', 'Descaling solution', 'Solution for removing mineral buildup from the coffee machine', 'consumables', 10, itemimageCodeUnitExtra.E0003_descaling());
@@ -111,7 +111,7 @@ codeunit 52001 PowerAppsDemoDataGenerator
         itemRecord.Validate("Gen. Prod. Posting Group", genProdPostingGroup.Code);
         itemRecord.Validate("Tax Group Code", taxGroupCode.Code);
         itemRecord.Validate(IsAvialableForFieldWorker, true);
-        //addImageToItem(itemPicture, itemRecord);
+        addImageToItem(itemPicture, itemRecord);
 
         // Save the item
         itemRecord.Insert(true);
