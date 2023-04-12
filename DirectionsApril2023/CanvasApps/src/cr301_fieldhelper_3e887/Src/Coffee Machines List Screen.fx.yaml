@@ -1,6 +1,6 @@
 "'Coffee Machines List Screen' As screen":
     Fill: =varTheme.brandColor
-    OnVisible: |-
+    OnVisible: |
         =UpdateContext({
             ctxShowFilter: CountRows(colMeasurements) > 0,
             ctxFilterHeight: LookUp(colMeasurements, name = "Height").value,
@@ -106,7 +106,7 @@
             galCoffeeMachine As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Filter('directionsItems (microsoft/powerApps/beta)', 'Is available for field workers')
+                Items: =Filter('directionsItems (microsoft/powerApps/beta)', itemCategoryCode = "finishedGoods")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
