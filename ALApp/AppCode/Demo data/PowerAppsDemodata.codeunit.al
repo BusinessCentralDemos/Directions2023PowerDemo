@@ -36,11 +36,11 @@ codeunit 52001 PowerAppsDemoDataGenerator
         // Add Coffee machines
         AddItem('CM001', 'Contoso SLIM 2018 San Diego', 'Contoso SLIM 2018 San Diego', 'finishedGoods', 699, tempImage);
         AddItem('CM002', 'Contoso SLIM 2019 Las Vegas', 'Contoso SLIM 2019 Las Vegas', 'finishedGoods', 850, itemImageCodeUnit.C0002_2019LasVegaSlim());
-        AddItem('CM003', 'Contoso MINI  2018 San Diego', 'Contoso MINI  2018 San Diego', 'finishedGoods', 499, itemImageCodeUnit.C0003_2018SandiagoMini());
+        AddItem('CM003', 'Contoso MINI 2018 San Diego', 'Contoso MINI 2018 San Diego', 'finishedGoods', 499, itemImageCodeUnit.C0003_2018SandiagoMini());
         AddItem('CM004', 'Contoso MINI 2022 Orlando', 'Contoso MINI 2022 Orlando', 'finishedGoods', 499, itemImageCodeUnit.C0004_2022OrlandoMini());
         AddItem('CM005', 'Contoso MINI 2023 Orlando', 'Contoso MINI 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0005_2023OrlandoMini());
         AddItem('CM006', 'Contoso PRO SLIM 2023 Orlando', 'Contoso PRO SLIM 2023 Orlando', 'finishedGoods', 699, itemImageCodeUnit.C0006_2023OrlandoProSlim());
-        AddItem('CM007', 'Contoso MIINI 2019 Las Vegas', 'Contoso MIINI 2019 Las Vegas', 'finishedGoods', 699, itemImageCodeUnit.C0007_2019LasVegasMini());
+        AddItem('CM007', 'Contoso MINI 2019 Las Vegas', 'Contoso MIINI 2019 Las Vegas', 'finishedGoods', 699, itemImageCodeUnit.C0007_2019LasVegasMini());
 
         // Call AddItemUnitOfMeasure for each item with the corresponding ID   
         AddItemUnitOfMeasure('CM001');
