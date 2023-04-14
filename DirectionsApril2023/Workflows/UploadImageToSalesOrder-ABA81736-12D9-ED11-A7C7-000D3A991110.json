@@ -83,38 +83,10 @@
               "bcenvironment": "Sandbox",
               "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
               "dataset": "v2.0",
-              "table": "attachments",
-              "item/parentId": "@triggerBody()['text']",
-              "item/fileName": "test.png",
-              "item/parentType": "Sales_x0020_Order"
-            },
-            "authentication": "@parameters('$authentication')"
-          }
-        },
-        "Update_an_image,_file_or_document_(V3)": {
-          "runAfter": {
-            "Create_record_(V3)": [
-              "Succeeded"
-            ]
-          },
-          "metadata": {
-            "operationMetadataId": "53add999-1e84-42fc-82af-f039426f0cda"
-          },
-          "type": "OpenApiConnection",
-          "inputs": {
-            "host": {
-              "connectionName": "shared_dynamicssmbsaas_1",
-              "operationId": "PatchBlobFromNavigationV3",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
-            },
-            "parameters": {
-              "bcenvironment": "Sandbox",
-              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
-              "dataset": "v2.0",
-              "blobnavigationpath": "salesOrders/attachments/attachmentContent",
-              "pathParameters/salesOrders": "@triggerBody()['text']",
-              "pathParameters/salesOrders~1attachments": "@outputs('Create_record_(V3)')?['body/id']",
-              "pathParameters/$content": "@triggerBody()?['file']?['contentBytes']"
+              "table": "documentAttachments",
+              "item/fileName": "Rendered3D.png",
+              "item/parentType": "2",
+              "item/parentId": "@triggerBody()['text']"
             },
             "authentication": "@parameters('$authentication')"
           }
@@ -145,6 +117,34 @@
                 }
               }
             }
+          }
+        },
+        "Update_an_image,_file_or_document_(V3)": {
+          "runAfter": {
+            "Create_record_(V3)": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "91343282-6ec2-40dc-81fd-80fb1942b37e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_dynamicssmbsaas_1",
+              "operationId": "PatchBlobFromNavigationV3",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
+            },
+            "parameters": {
+              "bcenvironment": "SANDBOX",
+              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+              "dataset": "v2.0",
+              "blobnavigationpath": "salesOrders/documentAttachments/attachmentContent",
+              "pathParameters/salesOrders": "@outputs('Create_record_(V3)')?['body/parentId']",
+              "pathParameters/salesOrders~1documentAttachments": "@outputs('Create_record_(V3)')?['body/id']",
+              "pathParameters/$content": "@triggerBody()?['file']?['contentBytes']"
+            },
+            "authentication": "@parameters('$authentication')"
           }
         }
       },
