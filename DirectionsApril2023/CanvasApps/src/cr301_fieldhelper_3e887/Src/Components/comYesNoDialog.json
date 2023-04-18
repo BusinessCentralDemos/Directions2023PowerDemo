@@ -1786,7 +1786,8 @@
               "RadiusTopLeft",
               "RadiusTopRight",
               "RadiusBottomLeft",
-              "RadiusBottomRight"
+              "RadiusBottomRight",
+              "DropShadow"
             ],
             "ControlUniqueId": "14",
             "HasDynamicProperties": false,
@@ -1934,6 +1935,12 @@
                 "InvariantScript": "0",
                 "Property": "RadiusBottomRight",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "DropShadow.None",
+                "Property": "DropShadow",
+                "RuleProviderType": "Unknown"
               }
             ],
             "StyleName": "",
@@ -1947,7 +1954,7 @@
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "OverridableProperties": {},
-              "Version": "1.2.0"
+              "Version": "1.3.0"
             },
             "Type": "ControlInfo",
             "VariantName": "horizontalAutoLayoutContainer"
@@ -2000,7 +2007,8 @@
           "RadiusTopLeft",
           "RadiusTopRight",
           "RadiusBottomLeft",
-          "RadiusBottomRight"
+          "RadiusBottomRight",
+          "DropShadow"
         ],
         "ControlUniqueId": "11",
         "HasDynamicProperties": false,
@@ -2130,6 +2138,12 @@
             "InvariantScript": "0",
             "Property": "RadiusBottomRight",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "DropShadow.None",
+            "Property": "DropShadow",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "",
@@ -2143,7 +2157,7 @@
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "OverridableProperties": {},
-          "Version": "1.2.0"
+          "Version": "1.3.0"
         },
         "Type": "ControlInfo",
         "VariantName": ""
@@ -2182,7 +2196,7 @@
       "behaviorNo",
       "PrimaryColor"
     ],
-    "LastModifiedTimestamp": "638169037525372042",
+    "LastModifiedTimestamp": "638173876241549129",
     "Name": "comYesNoDialog",
     "Rules": [
       {
@@ -2303,7 +2317,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638169037525372042",
+  "LastModifiedTimestamp": "638173876241549129",
   "Name": "3c030ee18d5d4acdb0591f7d2f3b76c5",
   "OverridableProperties": {},
   "TemplateOriginalName": "01906efe1f6b4ac885f5f6ea0fc7bf76",
