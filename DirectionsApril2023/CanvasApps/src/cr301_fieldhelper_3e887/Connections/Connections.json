@@ -9,7 +9,7 @@
       "parameterHintsV2": {}
     },
     "datasets": {
-      "Sandbox,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
+      "Production,9a7a387b-dfcd-ed11-94c8-000d3a2b981f": {
         "dataSources": {
           "customers (v2.0)": {
             "tableName": "customers,v2.0"
@@ -52,7 +52,7 @@
           "value": "aba81736-12d9-ed11-a7c7-000d3a991110"
         },
         "workflowName": {
-          "value": "b37ac439-581b-41d5-b05c-befd5c9b6a1d"
+          "value": "a54eba30-f5fb-4733-9594-c159f1a08e3a"
         }
       },
       "parameterHintsV2": {
@@ -63,7 +63,7 @@
           "value": "aba81736-12d9-ed11-a7c7-000d3a991110"
         },
         "workflowName": {
-          "value": "b37ac439-581b-41d5-b05c-befd5c9b6a1d"
+          "value": "a54eba30-f5fb-4733-9594-c159f1a08e3a"
         }
       }
     },

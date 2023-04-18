@@ -80,8 +80,8 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
             "parameters": {
-              "bcenvironment": "Sandbox",
-              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+              "bcenvironment": "Production",
+              "company": "9a7a387b-dfcd-ed11-94c8-000d3a2b981f",
               "dataset": "v2.0",
               "table": "documentAttachments",
               "item/fileName": "Rendered3D.png",
@@ -136,8 +136,8 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
             },
             "parameters": {
-              "bcenvironment": "SANDBOX",
-              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+              "bcenvironment": "Production",
+              "company": "9a7a387b-dfcd-ed11-94c8-000d3a2b981f",
               "dataset": "v2.0",
               "blobnavigationpath": "salesOrders/documentAttachments/attachmentContent",
               "pathParameters/salesOrders": "@outputs('Create_record_(V3)')?['body/parentId']",

@@ -105,6 +105,7 @@
     "Id": "a0c6a493-43e4-48bf-b7a4-a86544badab4",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
+    "ManualOfflineProfileId": "",
     "Name": "Field Helper",
     "OriginatingVersion": "1.330"
   },
