@@ -207,7 +207,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/18/2023 11:45:05",
+  "HeaderLastSavedDateTimeUTC": "04/18/2023 15:43:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0ff5df45-9575-4f2b-8cac-8ae027644295": "\"/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas/connections/6a47f15054e440f4a7b5eb4cbfaa16c7\"",
@@ -219,8 +219,8 @@
     "placeholder": "c940736a-1400-4426-9ca0-082919baf7a1.png"
   },
   "LocalResourceRootPaths": {
-    "loading-spinner": "https://docserverpwaprodwus.blob.core.windows.net/c1d7e434-8a7e-4d1b-8c35-8265277e9a96-1/resource/Assets0Images0a8380748-623c-40a8-ab3e-c250bfa57f03.gif?sv=2018-03-28&sr=b&sig=UQRW1rLRffwEUE4L8ehGKfOcbho%2BFnsQFge%2Fs%2B%2Bw0Ms%3D&spr=https&se=2023-04-19T11%3A57%3A01Z&sp=r",
-    "placeholder": "https://docserverpwaprodwus.blob.core.windows.net/c1d7e434-8a7e-4d1b-8c35-8265277e9a96-1/resource/Assets0Images0c940736a-1400-4426-9ca0-082919baf7a1.png?sv=2018-03-28&sr=b&sig=iHNPKrWtfvNn42KzLWfuhDVjfHy5xGglofqGg%2B8FlfU%3D&spr=https&se=2023-04-19T11%3A57%3A01Z&sp=r"
+    "loading-spinner": "https://docserverpwaprodeus.blob.core.windows.net/8f1a398a-1140-42b8-aa8f-f8dfb1aa6d8f-1/resource/Assets0Images0a8380748-623c-40a8-ab3e-c250bfa57f03.gif?sv=2018-03-28&sr=b&sig=SkjsqSzc3oBiHIupN1yF4KzZAoCLcwTGcP2TIzGpuu4%3D&spr=https&se=2023-04-19T15%3A57%3A40Z&sp=r",
+    "placeholder": "https://docserverpwaprodeus.blob.core.windows.net/8f1a398a-1140-42b8-aa8f-f8dfb1aa6d8f-1/resource/Assets0Images0c940736a-1400-4426-9ca0-082919baf7a1.png?sv=2018-03-28&sr=b&sig=XWRtB48DTcZtKENnoKCh7skAMNs81Vh9snkZOCFscdo%3D&spr=https&se=2023-04-19T15%3A57%3A40Z&sp=r"
   },
   "OrderComponentMetadata": {
     "3c030ee18d5d4acdb0591f7d2f3b76c5": 3,
@@ -864,7 +864,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.97871160000000001,
+    "AnalysisLoadTime": 1.0967387,
     "ControlCount": {
       "3c030ee18d5d4acdb0591f7d2f3b76c5": 3,
       "6fb90aa8ffd54e19b18c457ebdeb2dc1": 3,
@@ -885,7 +885,7 @@
       "timer": 1,
       "ViewInMR": 2
     },
-    "DeserializationLoadTime": 2.1386012000000001,
+    "DeserializationLoadTime": 5.4495500999999997,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
